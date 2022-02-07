@@ -1,0 +1,48 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongoDb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URL")
+}
+
+model menu {
+  id String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+}
+
+model product {
+  id   String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  name String
+  tags String[] @db.ObjectId
+}
+
+model product_tag {
+  id   String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  name String
+}
+
+model product_unit {
+  id   String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  name String
+}
+
+model recipe {
+  id          String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  description String
+  iamge_url   String
+  ingredients Json[]
+  name        String
+  rate        Int
+  time        Int
+}
+
+model recipe_tag {
+  id   String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  name String
+}
+
+model user {
+  id String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+}

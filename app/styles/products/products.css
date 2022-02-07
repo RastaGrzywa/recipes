@@ -1,0 +1,62 @@
+.products table {
+    width: 100%;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.products th:first-child, 
+.products th:nth-child(2), 
+.products td:first-child,
+.products td:nth-child(2) {
+    border: solid 1px #777;
+}
+
+.products td:nth-child(3),
+.products td:nth-child(4) {
+    width: 30px;
+}
+
+.column-name {
+    min-width: 150px;
+}
+
+.column-tags {
+    width: 300px;
+}
+
+
+.products td svg {
+    width: 35px;
+    height: 35px;
+    border: solid 1px #333;
+    border-radius: 10px;
+    transition: 350ms;
+    cursor: pointer;
+}
+
+.edit-button svg:hover {
+    background-color: #333;
+    fill: white;
+    border: solid 1px #aaa;
+}
+
+.delete-button svg:hover {
+    background-color: rgb(206, 12, 12);
+    fill: white;
+    border: solid 1px #aaa;
+}
+
+.add-button svg {
+    height: 35px;
+    width: 75px;
+    border: solid 1px #333;
+    border-radius: 10px;
+    transition: 350ms;
+    cursor: pointer;
+}
+
+.add-button svg:hover {
+    background-color: rgb(12, 206, 22);
+    fill: white;
+    border: solid 1px #aaa;
+}

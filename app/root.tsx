@@ -12,6 +12,7 @@ import type { LinksFunction } from "remix";
 
 import globalStylesUrl from "~/styles/global.css";
 import darkStylesUrl from "~/styles/dark.css";
+import * as dotenv from "dotenv";
 
 // https://remix.run/api/app#links
 export let links: LinksFunction = () => {
@@ -133,10 +134,10 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="https://remix.run/docs">Remix Docs</a>
+                <Link to="/products">Products</Link>
               </li>
               <li>
-                <a href="https://github.com/remix-run/remix">GitHub</a>
+                <Link to="/some">Something</Link>
               </li>
             </ul>
           </nav>
